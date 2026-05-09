@@ -46,10 +46,7 @@ local function setup_global_autocmds(config)
   vim.api.nvim_create_autocmd('DirChanged', {
     group = group,
     callback = function()
-      -- Window-local `:lcd` / `:tcd` are per-window — they don't change the
-      -- effective project root for the picker, so bail before touching
-      -- anything else.
-      if vim.v.event.scope == 'window' then return end
+      if vim.v.event.scope == 'window' and config.change_local_directory == false  then return end
       if not state.initialized then return end
 
       local new_cwd = vim.v.event.cwd
