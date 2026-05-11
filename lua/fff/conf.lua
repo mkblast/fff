@@ -199,7 +199,7 @@ local function init()
     max_threads = 4,
     lazy_sync = true, -- set to false if you want file indexing to start on open
     prompt_vim_mode = false, -- set to true to enable vim-mode in the prompt: <Esc> leaves insert for normal mode bindings (also allows <leader>p or <leader>l to jump around) the second <Esc> closes the picker
-    change_index_cwd_on_lcd = false,
+    change_index_cwd_on_lcd = false, -- set to true if you want the picker to index from the current local working directory (:h lcd).
     layout = {
       height = 0.8,
       width = 0.8,
