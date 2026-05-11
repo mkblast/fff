@@ -2714,7 +2714,7 @@ end
 --- @return table|nil, string|nil Merged configuration and base path, nil config if initialization failed
 local function initialize_picker(opts)
   local config = require('fff.conf').get()
-  local base_path = (opts and opts.cwd) or (config.change_local_directory and vim.fn.getcwd(0)) or vim.uv.cwd()
+  local base_path = (opts and opts.cwd) or (config.change_index_cwd_on_lcd  and vim.fn.getcwd(0)) or vim.uv.cwd()
 
   -- Initialize file picker if needed
   if not file_picker.is_initialized() then

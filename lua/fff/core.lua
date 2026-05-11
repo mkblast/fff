@@ -46,7 +46,7 @@ local function setup_global_autocmds(config)
   vim.api.nvim_create_autocmd('DirChanged', {
     group = group,
     callback = function()
-      if vim.v.event.scope == 'window' and config.change_local_directory == false then return end
+      if vim.v.event.scope == 'window' and config.change_index_cwd_on_lcd  == false then return end
       if not state.initialized then return end
 
       local new_cwd = vim.v.event.cwd

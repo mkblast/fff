@@ -200,7 +200,7 @@ require('fff').setup({
   max_threads = 4,
   lazy_sync = true,
   prompt_vim_mode = false,
-  change_local_directory = false,
+  change_index_cwd_on_lcd = false,
   layout = {
     height = 0.8,
     width = 0.8,
